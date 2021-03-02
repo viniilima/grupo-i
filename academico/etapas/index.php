@@ -10,6 +10,9 @@
     <main class="container">
         <div class="list-container">
             <h1>Lista de Etapas</h1>
+            <div class="btns">
+                <a class="btn" href="criar-etapa/">+ Nova</a>
+            </div>
             <?php
                 $conn = mysqli_connect('localhost', 'root', '', 'academico');
                 $sql = 'SELECT * FROM etapas ORDER BY id';
@@ -23,6 +26,7 @@
                         <tr>
                             <th>Ordem</th>
                             <th>Valor</th>
+                            <th colspan="2">Ações</th>
                         </tr>
                         </thead>';
                     while($row = mysqli_fetch_row($result)) {
@@ -30,15 +34,14 @@
                             <tr>
                                 <td>'. $row[0] . '</td>
                                 <td>' . $row[1] . '</td>
+                                <td title="Editar"><img id="edit-btn" class="table-icon" src="../assets/img/edit.svg"></td>
+                                <td title="Excluir"><img id="delete-btn" class="table-icon" src="../assets/img/excluir.svg"></td>
                             </tr>
                             </tbody>';
                     }
                     echo '</table>';
                 }
             ?>
-        </div>
-        <div class="btns">
-            <a class="btn" href="criar-etapa/">+ Nova</a>
         </div>
     </main>
 </body>

@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
         <h1>Criar nova Etapa</h1>
-        <form method="post">
+        <form action="criar_etapa.php" method="post">
             <div class="input-container">
                 <label for="ordem">Ordem</label>
                 <input type="number" name="ordem">
