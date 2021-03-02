@@ -9,7 +9,7 @@
 <body>
     <main class="container">
         <div class="list-container">
-            <h1>Lista de etapas</h1>
+            <h1>Lista de Etapas</h1>
             <?php
                 $conn = mysqli_connect('localhost', 'root', '', 'academico');
                 $sql = 'SELECT * FROM etapas ORDER BY id';
@@ -21,7 +21,7 @@
                     echo '<table>';
                     echo '<thead>
                         <tr>
-                            <th>Id</th>
+                            <th>Ordem</th>
                             <th>Valor</th>
                         </tr>
                         </thead>';
@@ -36,6 +36,9 @@
                     echo '</table>';
                 }
             ?>
+        </div>
+        <div class="btns">
+            <a class="btn" href="criar-etapa/">+ Nova</a>
         </div>
     </main>
 </body>
