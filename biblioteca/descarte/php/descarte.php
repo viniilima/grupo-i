@@ -31,8 +31,13 @@ if($result = mysqli_query($conn, $sql)) {
     }
 }
 
-// Deleta o acervo da tabela acervo
-$sql = 'DELETE FROM acervo WHERE id = ' . $data->id;
+$sql = "SELECT tipo FROM acervo WHERE id = $data->id";
+$tipo = mysqli_query($conn, $sql);
+$tipo = mysqli_fetch_row($tipo);
+$tipo = $tipo[0];
+
+// Deleta o acervo da tabela acervo e da tabela do tipo correspondente
+$sql = "DELETE acervo, $tipo FROM acervo INNER JOIN $tipo WHERE acervo.id = $data->id AND $tipo.id_acervo = $data->id";
 
 if(mysqli_query($conn, $sql)) http_response_code(200);
 
