@@ -7,7 +7,7 @@
     <title>Etapas - Projeto Acadêmico</title>
 </head>
 <body>
-    <main class="container">
+    <div class="container">
         <div class="list-container">
             <h1>Lista de Etapas</h1>
             <div class="btns">
@@ -18,7 +18,7 @@
                 $sql = 'SELECT * FROM etapas ORDER BY id';
                 if($result = mysqli_query($conn, $sql)) {
                     if(mysqli_num_rows($result) == 0) {
-                        echo '<span class="error">Não há etapas cadastradas :(</span>';
+                        echo '<div class="error-msg">Não há etapas cadastradas :(</div>';
                         die();
                     }
                     echo '<table>';
@@ -28,21 +28,29 @@
                             <th>Valor</th>
                             <th colspan="2">Ações</th>
                         </tr>
-                        </thead>';
+                        </thead>
+                        <tbody>';
                     while($row = mysqli_fetch_row($result)) {
-                        echo '<tbody>
-                            <tr>
+                        echo '<tr>
                                 <td>'. $row[0] . '</td>
                                 <td>' . $row[1] . '</td>
-                                <td title="Editar"><img id="edit-btn" class="table-icon" src="../assets/img/edit.svg"></td>
-                                <td title="Excluir"><img id="delete-btn" class="table-icon" src="../assets/img/excluir.svg"></td>
-                            </tr>
-                            </tbody>';
+                                <td title="Editar">
+                                    <div class="edit-btn" data-id="'.$row[0].'" data-valor="'.$row[1].'">
+                                        <img class="table-icon" src="../assets/etapas/img/edit.svg">
+                                    </div>
+                                </td>
+                                <td title="Excluir">
+                                    <div class="delete-btn" data-id="'.$row[0].'" data-valor="'.$row[1].'">
+                                        <img class="table-icon" src="../assets/etapas/img/excluir.svg">
+                                    </div>
+                                </td>
+                            </tr>';
                     }
-                    echo '</table>';
+                    echo '</tbody></table>';
                 }
             ?>
         </div>
-    </main>
+    </div>
+    <script src="../assets/etapas/js/main.js"></script>
 </body>
 </html>

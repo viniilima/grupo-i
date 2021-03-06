@@ -9,19 +9,20 @@
 <body>
     <div class="form-container">
         <h1>Criar nova Etapa</h1>
-        <form action="criar_etapa.php" method="post">
+        <form method="post">
             <div class="input-container">
                 <label for="ordem">Ordem</label>
-                <input type="number" name="ordem">
+                <input type="number" name="ordem" class="etapas-data" required>
             </div>
             <div class="input-container">
                 <label for="valor">Valor</label>
-                <input type="number" name="valor" maxlength="5">
-            </div>
-            <div class="input-container">
-                <input type="submit" value="Criar">
+                <input type="number" name="valor" class="etapas-data" maxlength="5" required>
             </div>
         </form>
+        <div class="btn-container">
+            <button id="submit">Criar</button>
+        </div>
     </div>
+    <script src="../../assets/etapas/js/cria_etapa.js"></script>
 </body>
 </html>

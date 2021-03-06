@@ -4,6 +4,8 @@ const submitBtn = document.getElementById('submit');
 
 // Functions
 function callDescarte() {
+    
+    // Coloca todos os dados dos inputs em um objeto
     const inputs = document.querySelectorAll('.descarte-data');
     let data = {};
     for(let input of inputs) {
@@ -38,10 +40,10 @@ function callDescarte() {
 }
 
 function errorMessage(msg) {
-    const errorMsg = document.createElement('span');
+    const errorMsg = document.createElement('div');
     const formContainerEl = document.querySelector('.form-container');
+    errorMsg.classList.add('error-msg');
     errorMsg.innerHTML = msg;
-    errorMsg.classList.add('error-msg')
     formContainerEl.appendChild(errorMsg);
 }
 
