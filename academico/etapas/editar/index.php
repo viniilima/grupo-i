@@ -23,7 +23,7 @@
                     <label for="valor">Novo valor</label>
                     <input type="number" name="valor" placeholder="(<?php echo $valor_old ?>)">
                 </div>
-                <div class="input-container">
+                <div class="btn-container">
                     <input type="submit" name="submit" value="Alterar">
                 </div>
             </form>

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.title {
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+}
+
+.data {
+    margin-top: 50px;
+    height: 500px;
+}
+
+.subtitle {
+    width: 100%;
+    display: flex;
+}
+
+.inp1 {
+    margin-top: 80px;
+}
+
+.inp2 {
+    margin-top: 135px;
+}
+
+.inp3 {
+    margin-top: 190px;
+}
+
+body {
+    background-color: grey;
+}
+
+h1,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+    position: absolute;
+    width: 40%;
+    resize: none;
+    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    position: absolute;
+    width: 40%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    position: absolute;
+    top: 82%;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.animation {
+    border-color: #474747;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #474747 inset, 0 0 0 0 #474747;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.animation:hover {
+    color: black;
+    box-shadow: 0 0 10px 0 #474747 inset, 0 0 10px 4px #474747;
+}

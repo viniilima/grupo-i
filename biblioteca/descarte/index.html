@@ -4,45 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descartar acervo - Biblioteca</title>
-    <style>
-        body {
-            height: 100vh;
-        }
-
-        input, textarea {
-            display: block;
-        }
-
-        .input-container {
-            padding: 5px 0;
-        }
-    </style>
+    <title>Descartes</title>
+    <link rel="stylesheet" href="../assets/descarte/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
-    <div class="container">
-        <h1>Descarte de acervo</h1>
-        <div class="form-container">
-            <form method="post">
-                <div class="input-container">
-                    <label for="operador">Operador</label>
-                    <input type="text" name="operador" class="descarte-data">
-                </div>
-                <div class="input-container">
-                    <label for="id">Id do acervo à ser descartado</label>
-                    <input type="number" name="id" class="descarte-data">
-                </div>
-                <div class="input-container">
-                    <label for="motivos">Motivos</label>
-                    <textarea name="motivos" id="motivos-txarea" class="descarte-data" cols="30" rows="10" maxlength="200"></textarea>
-                </div>
-            </form>
-            <div class="btn-container">
-                <button id="submit">Descatar</button>
-                <button id="cancel">Cancelar</button>
-            </div>
-        </div>
+    <div class="title">
+        <h1>Descartes</h1>
     </div>
-    <script src="../assets/js/script.js"></script>
+    <form>
+        <div class="title data">
+            <h3>Informe os dados necessários para o descarte!</h3>
+            <input class="inp1" type="text" name="operador" id="operador" placeholder="Digite o nome do operador">
+            <input class="inp2" type="number" name="id" id="id" placeholder="Digite o id do acervo">
+            <textarea class="inp3" type="text" name="motivo" id="motivo" placeholder="Digite o motivo do descarte"></textarea>
+            <button class="btn animation" type="submit">Descartar</button>
+        </div>
+    </form>
 </body>
 </html>
